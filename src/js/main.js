@@ -11,3 +11,7 @@ const lofi = document.querySelector('#lofi')
 const play = document.querySelector('#play')
 const pause = document.querySelector('#pause')
 
+const start = () => {
+
+
+}

@@ -28,11 +28,11 @@
 
         <div class="ms-auto">
             <a>
-                <i id="pause" class="fa-solid fa-pause text-white" style="font-size: 25pt; display: none !important;"
+                <i id="pause" class="fa-solid fa-pause text-white" style="font-size: 25pt; display: none;"
                     aria-hidden="true"></i>
             </a>
             <a>
-                <i id="play" class="fa-solid fa-play text-white" style="font-size: 25pt; display: none !important;"
+                <i id="play" class="fa-solid fa-play text-white" style="font-size: 25pt; display: none;"
                     aria-hidden="true"></i>
             </a>
 
@@ -54,10 +54,13 @@
                             <div class="col-md-3">
                                 <div class="mb-3">
                                     <label for="action"
-                                        class="form-label d-flex justify-content-center text-white fw-bold">Ação</label>
+                                        class="form-label d-flex justify-content-center text-white fw-bold">
+                                        Ação
+                                    </label>
                                     <input type="number"
                                         class="form-control form-control-lg bg-dark border-0 shadow text-white"
                                         id="action">
+                                    <small class="text-danger" id="erro_action"></small>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -67,6 +70,7 @@
                                     <input type="number"
                                         class="form-control form-control-lg bg-dark border-0 shadow text-white"
                                         id="stop">
+                                    <small class="text-danger" id="erro_stop"></small>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -76,6 +80,7 @@
                                     <input type="number"
                                         class="form-control form-control-lg bg-dark border-0 shadow text-white"
                                         id="sessions">
+                                    <small class="text-danger" id="erro_sessions"></small>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +98,7 @@
         </div>
         <!-- /config -->
         <!-- timer -->
-        <div id="timer" class="mt-0 d-flex justify-content-center" style="display: none !important">
+        <div id="timer" class="mt-0 d-flex justify-content-center">
             <div class=" row mb-3">
                 <div class="col">
                     <h3 id="title" class="text-center"></h3>
@@ -119,7 +124,7 @@
         <!-- /timer -->
 
         <!-- finish -->
-        <div id="end" style="display: none !important;">
+        <div id="end" style="display: none;">
             <h1 class="text-success text-center">
                 Parabéns! Você finalizou suas tarefas.
             </h1>

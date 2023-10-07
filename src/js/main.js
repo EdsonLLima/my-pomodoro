@@ -12,6 +12,19 @@ const play = document.querySelector('#play')
 const pause = document.querySelector('#pause')
 
 const start = () => {
+    if (action.value == 0) {
+        document.querySelector('#erro_action').innerHTML = "adicione os minutos"
+        action.focus()
+    } else if (stop.value == 0) {
+        document.querySelector('#erro_stop').innerHTML = "adicione a  pausa"
+        stop.focus()
+    } else if (sessions.value == 0) {
+        document.querySelector('#erro_sessions').innerHTML = "adicione as sessões  "
+        sessions.focus()
+    } else {
+        lofi.play()
+        pause.style.setProperty('display', 'block', 'important')
 
+    }
 
 }

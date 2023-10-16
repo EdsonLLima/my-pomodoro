@@ -16,12 +16,12 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 input[type="number"] {
-    -moz-appearance: none;
+    appearance: none;
 
 }
 
 .time {
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     width: 20rem;
     height: 20rem;

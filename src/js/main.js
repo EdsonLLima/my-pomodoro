@@ -1,7 +1,7 @@
 const action = document.querySelector('#action')
 const stop_session = document.querySelector('#stop')
 const sessions = document.querySelector('#sessions')
-const seconds = 0
+const seconds = null
 
 const bell = new Audio("../src/audio/bell.mp3")
 const back = new Audio("../src/audio/volta.mp3")
@@ -34,5 +34,31 @@ const start = () => {
         document.getElementById('timer').style.setProperty('display', 'block', 'important')
 
     }
+}
+
+const momentOfAction = () => {
+    const sessions_value = localStorage.getItem('sessions')
+    const title_sessions = document.querySelector('#title_sessions')
+
+    if (sessions_value !== '1') {
+        title_sessions.innerHTML = `${sessions_value} sessões restantes`
+
+    } else {
+        title_sessions.innerHTML = `${sessions_value} sessão restante`
+    }
+
+    const title = document.querySelector('title')
+    title.innerHTML = "AÇÃO"
+    title.style.fontSize = '25pt'
+    title.style.fontWeight = 'bold'
+    title.style.setProperty('color', '#28a745', important)
+
+    let minute = Number(localStorage.getItem('action'))
+
+    minute = minute - 1
+    seconds = 59
+
+    document.querySelector('#minutes_ok').innerHTML = minute
+    document.querySelector('#seconds_ok').innerHTML = seconds
 
 }
